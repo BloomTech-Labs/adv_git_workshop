@@ -27,3 +27,14 @@ Lets see this in action:
    1. You should see `modified:   checkout.md`
 4. Now lest discard this change with the command `git checkout checkout.md`
 5. `git status` should now show that the branch tree is clean (no changes)
+
+### Restore file to previous commit
+
+Using checkout to "restore" a file to a previous commit isn't as common and
+typically is only used to test or debug based on changes to a single or small
+number of files.
+
+It's important to note that we aren't restoring anything. The commit history
+is unchanged. It's the local (current) file that is changed. Now if we were to
+commit the local file in this state it would then be restored to the previous
+version in the commit history.
