@@ -24,5 +24,6 @@ Lets see this in action:
 1. Make a change to this file by adding some text at the end of this line
 2. Save the file.
 3. run the command `git status` to confirm that git noticed that the file has been modified.
+   1. You should see `modified:   checkout.md`
 4. Now lest discard this change with the command `git checkout checkout.md`
 5. `git status` should now show that the branch tree is clean (no changes)
