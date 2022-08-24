@@ -35,21 +35,29 @@ typically is only used to test or debug based on changes to a single or small
 number of files.
 
 It's important to note that we aren't restoring anything. The commit history
-is unchanged. It's the local (current) file that is changed. Now if we were to
-commit the local file in this state it would then be restored to the previous
-version in the commit history.
+is unchanged. It's the local (current) file that is changed only. In fact, the
+file will be set to the commit version you requested and marked as staged for
+commiting. Now if we were to commit the local file in this state it would then
+be restored to the previous version in the commit history.
 
 Also note that in this scenario we can not use `git checkout checkout.md` to
 discard the changes. Git knows that we asked for a previous revision of the
 file and now has the ref in a special state. To discard these changes we have
-to use the `git restore` command. ⭐️ Bonus command to learn.
+to use the `git restore` command twice. Once with `git restore --staged` to
+undo the staging of the file, then again to restore the latest committed
+version of the file. ⭐️ Bonus command to learn.
 
 Lets see this in action:
 
-1. Lets confirm the branch is clean with `git status`
-2. now lets checkout a previous version of this file
-   1. `git checkout e10ec671574bb320a917ebf85117fb888d6a0a0d checkout.md
-3. `git status` will confirm that the file is now modified.
-   1. If you have the file open in an editor the contents should now be changed
+1. Confirm the branch is clean with `git status`
+   1. `nothing to commit, working tree clean`
+2. Now lets checkout a previous version of this file
+   1. `git checkout e10ec671574bb320a917ebf85117fb888d6a0a0d checkout.md`
+3. `git status` will confirm that the file is now modified and staged.
+   1. If you have the file open in an editor the contents will now be changed
+   2. Also, have a look at the `git log` and see that the most recent commits are still there.
 4. Now lets restore the file to the most recent commit
-   1. `git restore checkout.md`
+   1. `git restore --staged checkout.md`
+   2. `git restore checkout.md`
+
+While this command has some overhead in restoring the file(s) it is one of the safest ways to work with older versions of files.
