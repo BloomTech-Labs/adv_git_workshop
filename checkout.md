@@ -8,4 +8,7 @@ It is very common to use checkout on files and folders as well.
 
 ## File checkout
 
-Let's have a look at the outcome of `checkout` on files in 2 scenarios.
+Let's have a look at the outcome of `checkout` on files in 2 scenarios. (more scenarios exist but let's just start with 2 😉)
+
+- discard uncommited changes
+- restore file to previous commit (based on commit hash)
