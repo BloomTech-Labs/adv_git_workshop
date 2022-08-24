@@ -10,6 +10,8 @@ Throughout your Bloomtech experience thus far you have learned how to work with 
 
 For this workshop you will find branches setup for each command. These branches will have additional files with instructions. You will find the following branches:
 
-`checkout`
-`revert`
-`reset`
+- `checkout`
+- `revert`
+- `reset`
+
+You can checkout a branch and follow along the MD file named after the command, eg. `checkout.md` will have instructions for the checkout command.
