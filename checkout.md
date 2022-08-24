@@ -25,4 +25,4 @@ Lets see this in action:
 2. Save the file.
 3. run the command `git status` to confirm that git noticed that the file has been modified.
 4. Now lest discard this change with the command `git checkout checkout.md`
-5. `git status` should now show no changes to the branch
+5. `git status` should now show that the branch tree is clean (no changes)
