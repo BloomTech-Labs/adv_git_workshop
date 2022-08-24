@@ -45,3 +45,11 @@ file and now has the ref in a special state. To discard these changes we have
 to use the `git restore` command. ⭐️ Bonus command to learn.
 
 Lets see this in action:
+
+1. Lets confirm the branch is clean with `git status`
+2. now lets checkout a previous version of this file
+   1. `git checkout e10ec671574bb320a917ebf85117fb888d6a0a0d checkout.md
+3. `git status` will confirm that the file is now modified.
+   1. If you have the file open in an editor the contents should now be changed
+4. Now lets restore the file to the most recent commit
+   1. `git restore checkout.md`
