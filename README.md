@@ -10,7 +10,7 @@ Throughout your Bloomtech experience thus far you have learned how to work with 
 
 For this workshop you will find branches setup for each command. These branches will have additional files with instructions. You will find the following branches:
 
-- `checkout`
+- [checkout](https://github.com/BloomTech-Labs/adv_git_workshop/tree/checkout)
 - `revert`
 - `reset`
 
