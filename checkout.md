@@ -38,3 +38,10 @@ It's important to note that we aren't restoring anything. The commit history
 is unchanged. It's the local (current) file that is changed. Now if we were to
 commit the local file in this state it would then be restored to the previous
 version in the commit history.
+
+Also note that in this scenario we can not use `git checkout checkout.md` to
+discard the changes. Git knows that we asked for a previous revision of the
+file and now has the ref in a special state. To discard these changes we have
+to use the `git restore` command. ⭐️ Bonus command to learn.
+
+Lets see this in action:
