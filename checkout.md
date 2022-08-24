@@ -12,3 +12,17 @@ Let's have a look at the outcome of `checkout` on files in 2 scenarios. (more sc
 
 - discard uncommited changes
 - restore file to previous commit (based on commit hash)
+
+### Discard uncommitted changes
+
+This is by far one of the most commonly used git command scenarios. Imagine you
+have made a change in a file only to find that you broke dozens of tests. 😱 🤦
+Well, it is likely worth just discarding these changes and starting over.
+
+Lets see this in action:
+
+1. Make a change to this file by adding some text at the end of this line
+2. Save the file.
+3. run the command `git status` to confirm that git noticed that the file has been modified.
+4. Now lest discard this change with the command `git checkout checkout.md`
+5. `git status` should now show no changes to the branch
