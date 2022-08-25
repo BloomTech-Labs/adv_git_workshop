@@ -50,6 +50,7 @@ To remove a commit but not put the changes into the staging or working tree we u
    3. `git log` notice the message of the HEAD commit
 2. Let's make a change to this file and stage it.
    1. Put your name <HERE> <- inside the brackets
+   2. `git add reset.md`
 3. Let's check the state of the file again
    1. `git status && git ls-files -s`
    2. You should see `modified:     reset.md`
