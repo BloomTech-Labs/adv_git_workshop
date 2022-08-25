@@ -1,6 +1,6 @@
 # Advanced Git Workshop
 
-This repo is used in the Advanced Git workshop to walk through various git commands, such as log, checkout, revert, and reset.
+This repository is used in the Advanced Git workshop to walk through various git commands, such as log, checkout, revert, and reset.
 
 ## Description
 
