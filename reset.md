@@ -18,6 +18,23 @@ The `reset` command can remove commits fromt he commit history and move the chan
 
 Lets look at how to reset a commit into each of the other trees.
 
-## Reset to staging index tree
+## Reset to staging index tree --mixed
+
+To move the commit changes into the staging tree we use the --mixed option. This is also the default, so we could leave the option off. Lets remove a commit and place the changes from that commit into the staging index (staged)
+
+1. Lets inspect the commit history and make note of the HEAD commit message
+   1. `git log`
+   2. Also, lets output the current sha of the files. The sha hash will change as we work with the commit history.
+      1. `git ls-files -s`
+2. Now lets remove the current HEAD commit
+   1. `git reset HEAD~1 --mixed`
+      1. This will reset to 1 commit before HEAD
+3. The contents of this file should not change but the file should now be staged.
+   1. `git status`
+   2. You should see `modified:   reset.md`
+4. Since no content has been lost, let's commit the file again.
+   1. `git commit -m "put commit back in history"`
+
+> 🌕 Note: if you had changes already staged they will be moved to the working tree or replaced.
 
 ## Reset to the working tree
