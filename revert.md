@@ -10,7 +10,7 @@ the change. The old commit is not removed like a traditional "undo", this will
 leave the old commit in your history but you will have a new commit that
 "undoes" it.
 
-> Note that your working tree must **not** have any changes since the HEAD
+> 🔵 Note: that your working tree must **not** have any changes since the HEAD
 > commit. This includes staged changes.
 
 This will not undo all the commits from HEAD back to the selected
