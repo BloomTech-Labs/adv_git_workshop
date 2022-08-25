@@ -16,7 +16,7 @@ The `reset` command works on all 3 of the areas of git's internal state manageme
 
 The `reset` command can remove commits fromt he commit history and move the changes into either of the other 2 "trees". In complex cases this can require the user to work thru multiple merge conflicts as `reset` works through each commit.
 
-Lets look at how to reset of a commit impacts each of the other trees.
+Lets look at how the reset of a commit impacts each of the other trees.
 
 ## Reset to staging index tree `--mixed`
 
