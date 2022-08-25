@@ -97,3 +97,5 @@ Similar to the `reset --soft` command we're going to make changes to this file a
    2. The previous HEAD commit is now removed
    3. `git status`
    4. we now see `nothing to commit, working tree is clean` and both our stage and working trees match the new commit history tree. We are ready to over. 😀
+
+Enjoy your new git powers!!
