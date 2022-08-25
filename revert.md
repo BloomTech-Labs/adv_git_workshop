@@ -30,8 +30,10 @@ Let's have a look at the outcome of `revert` on this working tree (branch):
 2. Have a look at the current history.
    1. `git log`
    2. Make note of the HEAD commit message
-3. Lets revert a specific commit
-   1. `git revert HEAD`
+3. Lets revert a the HEAD commit (what we currently see)
+   1. `git revert HEAD` 🟢🟢🟢🟢🟢🟢🟢🟢🟢
+   2. You might be prompted to review the commit message. Follow the
+      instructions to save the commit. (save and close message file)
 4. Lets see the outcome of this command
    1. `git log`
       1. Do you see a new commit at HEAD with the old HEAD following it?
