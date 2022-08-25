@@ -31,7 +31,7 @@ Let's have a look at the outcome of `revert` on this working tree (branch):
    1. `git log`
    2. Make note of the HEAD commit message
 3. Lets revert a specific commit
-   1. `git revert fa051b027e6d22ed073e898a27cb34256489f455`
+   1. `git revert HEAD`
 4. Lets see the outcome of this command
    1. `git log`
       1. Do you see a new commit at HEAD with the old HEAD following it?
