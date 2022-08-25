@@ -10,14 +10,14 @@ the change. The old commit is not removed like a traditional "undo", this will
 leave the old commit in your history but you will have a new commit that
 "undoes" it.
 
-> 🔵 Note: that your working tree must **not** have any changes since the HEAD
+> 🔴 Note: that your working tree must **not** have any changes since the HEAD
 > commit. This includes staged changes.
 
 This will not undo all the commits from HEAD back to the selected
 commit, but rather only the specific commit(s) will be "undone" by the new
 commit.
 
-> The option `-n` OR `--no-commit` will apply the changes but not make the
+> 🔵 The option `-n` OR `--no-commit` will apply the changes but not make the
 > new commit. This is handy for those times when you are unsure this will fix
 > an issue.
 
