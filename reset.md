@@ -50,7 +50,8 @@ To remove a commit but not put the changes into the staging or working tree we u
    3. `git log` notice the message of the HEAD commit
 2. Let's make a change to this file and stage it.
    1. Put your name <HERE> <- inside the brackets
-   2. `git add reset.md`
+   2. save the file
+   3. `git add reset.md`
 3. Let's check the state of the file again
    1. `git status && git ls-files -s`
    2. You should see `modified:     reset.md`
@@ -63,3 +64,36 @@ To remove a commit but not put the changes into the staging or working tree we u
    3. `git log`
    4. The HEAD commit we noticed from the last log command is now removed.
    5. Beacuse we have the changes in this file from that commit captured in the staged index tree nothing is lost, but it is not commited. 😉
+
+## Reset to remove a commit and clear the other trees `--hard`
+
+The `reset --hard` mode is the most dangerous. This is because it will not only remove the commit(s) but it will also clear changes in the staging and working trees so they match the new HEAD of the commit history tree. Any changes in these trees will be lost. While this might be dangerous, you might find yourself using it more frequently to "undo" some changes that you now realize aren't working and you want to start over from the last working commit.
+
+Similar to the `reset --soft` command we're going to make changes to this file a couple times so we have changes in the stage and working trees.
+
+1. Again, let's look at the status
+   1. `git status`
+   2. Clean working tree
+   3. `git log`
+   4. notice the HEAD commit
+2. Now for a change that we can stage.
+   1. Put your name <HERE> <- inside the brackets
+   2. save the file
+   3. `git add reset.md`
+3. Let's check the state of the file again
+   1. `git status`
+   2. You should see the `Changes to be committed:` section with `modified:     reset.md`
+4. Now for another change that we will leave in the working tree.
+   1. Put your name <HERE> <- inside the brackets
+   2. save the file
+   3. DON'T `git add`
+5. Checking the status again
+   1. `git status`
+   2. This time you should see the `Changes to be committed:` section as well as a new `Changes not staged for commit:` section. Both will have the `modified:     reset.md` item
+6. Now we're ready to hard reset the trees.
+   1. `git reset --hard HEAD~1`
+7. Lets look at all the info
+   1. `git log`
+   2. The previous HEAD commit is now removed
+   3. `git status`
+   4. we now see `nothing to commit, working tree is clean` and both our stage and working trees match the new commit history tree. We are ready to over. 😀
