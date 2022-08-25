@@ -29,7 +29,7 @@ Let's have a look at the outcome of `revert` on this working tree (branch):
    1. `git status`
 2. Have a look at the current history.
    1. `git log`
-   2. Notice the HEAD commit message
+   2. Make note of the HEAD commit message
 3. Lets revert a specific commit
    1. `git revert`
 4. Lets see the outcome of this command
