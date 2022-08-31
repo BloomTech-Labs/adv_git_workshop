@@ -24,12 +24,13 @@ To move the commit changes into the staging tree we use the --mixed option. This
 
 1. Lets inspect the commit history and make note of the HEAD commit message
    1. `git log`
-   2. Also, lets output the current sha of the files. The sha hash will change as we work with the commit history.
+   2. Also, lets output the current sha of the files. The sha hash will change as we save changes to the file.
       1. `git ls-files -s`
-2. Now lets remove the current HEAD commit
+      2. outputs current sha hash of the file
+2. Now lets **remove** the current HEAD commit
    1. `git reset HEAD~1 --mixed`
-      1. This will reset to 1 commit before HEAD
-      2. by default reset will work on HEAD, but if you don't have any changes in the stage or working trees then nothing will change.
+      1. This will reset the branch HEAD to 1 commit before current HEAD
+      2. By default reset will work on HEAD, but if you don't have any changes in the stage or working trees then nothing will change.
 3. The contents of this file should not change but the file should now be staged.
    1. `git status`
    2. You should see `modified:   reset.md`
@@ -50,7 +51,7 @@ To remove a commit but not put the changes into the staging or working tree we u
    3. `git log` notice the message of the HEAD commit
 2. Let's make a change to this file and stage it.
    1. Put your name <HERE> <- inside the brackets
-   2. save the file
+   2. save the file, then stage it
    3. `git add reset.md`
 3. Let's check the state of the file again
    1. `git status && git ls-files -s`
@@ -63,7 +64,8 @@ To remove a commit but not put the changes into the staging or working tree we u
    2. The file is still modified and the sha is not changed
    3. `git log`
    4. The HEAD commit we noticed from the last log command is now removed.
-   5. Beacuse we have the changes in this file from that commit captured in the staged index tree nothing is lost, but it is not commited. 😉
+   5. Beacuse we have the changes in this file from that commit captured in the staged index tree nothing is lost, but it is not commited either. 😉
+      1. `git commit -m "putting commit back in history"`
 
 ## Reset to remove a commit and clear the other trees `--hard`
 
@@ -75,7 +77,7 @@ Similar to the `reset --soft` command we're going to make changes to this file a
    1. `git status`
    2. Clean working tree
    3. `git log`
-   4. notice the HEAD commit
+   4. notice the HEAD commit "putting commit back in history"
 2. Now for a change that we can stage.
    1. Put your name <HERE> <- inside the brackets
    2. save the file
@@ -96,6 +98,6 @@ Similar to the `reset --soft` command we're going to make changes to this file a
    1. `git log`
    2. The previous HEAD commit is now removed
    3. `git status`
-   4. we now see `nothing to commit, working tree is clean` and both our stage and working trees match the new commit history tree. We are ready to over. 😀
+   4. we now see `nothing to commit, working tree is clean` and both our stage and working trees match the new commit history tree. We are ready to start over. 😀
 
 Enjoy your new git powers!! ⚡️
