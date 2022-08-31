@@ -43,7 +43,7 @@ To move the commit changes into the staging tree we use the --mixed option. This
 
 ## Reset to remove a commit `--soft`
 
-To remove a commit but not put the changes into the staging or working tree we use the `--soft` option. This one is a bit more tricky to understand so pay attention to the commit hashes. Also, we will need put this file into staging index tree otherwise the command will do nothing.
+To remove a commit but not put the content of the removed commit into the staging or working tree we use the `--soft` option. This one is a bit more tricky to understand so pay attention to the commit hashes. Also, we will need put this file into staging index tree otherwise the command will do nothing.
 
 1. Lets start by looking at the some info about the file.
    1. `git status && git ls-files -s`
